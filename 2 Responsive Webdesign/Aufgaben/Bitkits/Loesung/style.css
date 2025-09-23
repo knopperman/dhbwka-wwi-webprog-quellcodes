@@ -79,10 +79,6 @@ a:hover {
     background-color: #333333;
     color: white;
 
-    .padding {
-        margin-left: 8px;
-    }
-
     .highlight {
         background-color: #292929;
 
@@ -101,22 +97,21 @@ a:hover {
     }
 }
 
-
 /**
  * Heller Bereich
  */
 #section2 {
     .button {
-         background-color: #009999;
-         border-color: #008888;
+        background-color: #009999;
+        border-color: #008888;
     }
-    
+
     .highlight {
         font-size: 85%;
         border-color: #009999;
         background-color: #d5d5d5;
     }
-    
+
     .smallprint {
         font-size: 80%;
         text-align: center;
