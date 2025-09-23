@@ -56,7 +56,7 @@ header {
      * Container Queries gegen dieses Element erlauben 
      *
      * WICHTIG: Dem Element muss eine explizite Größe zugewiesen werden, da Elemente
-     * die in Container Queries abgefragt werden können, ihre Höhe mehr automatisch
+     * die in Container Queries abgefragt werden können, ihre Höhe nicht mehr automatisch
      * aus ihren Inhalten ableiten. Deshalb wird hier mit `flex-basis` die Größe gesetzt.
      * `flex-basis` ist die Höhe innerhalb einer horizontalen Flexbox und die Breite
      * in einer vertikalen Flexbox.
@@ -82,11 +82,11 @@ main {
     container-name: main;
 
     /*
-     * Alternativ die Breite und Höhe explizit zu setzen, wird empfohlen, Elemente,
-     * die mit Container Queries abgefragt werden, den Elementen durch eine sie
-     * umgebende Flexbox oder ein Grid ihre Größe zu geben. `<body>` ist deshalb
-     * eine Flexbox in mindestens Bildschirmhöhe, von der wir uns hier den Löwenteil
-     * schnappen.
+     * Anstatt einem Element, das per Container Query abgefragt werden soll, eine
+     * explizite Höhe zuzuweisen, wird empfohlen, es in eine Flexbox oder ein Grid
+     * zu stecken, welches die Höhe regelbasiert setzt. In diesem Beispiel ist
+     * <body> deshalb eine Flexbox in mindestens Bildschirmhöhe, von der wir uns hier
+     * den Löwenteil schnappen.
      */
     flex: 1;
 
