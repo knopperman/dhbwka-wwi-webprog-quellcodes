@@ -1,0 +1,41 @@
+html {
+    font-size: 110%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* https://pixabay.com/illustrations/texture-abstract-pattern-backdrop-7515225/ */
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background: #f6f6f6;
+    box-shadow: 0px 0px 4px rgba(0,0,0, 0.5);
+    z-index: 100;
+}
+
+main {
+    flex: 1;
+    backdrop-filter: blur(20px);
+}
+
+section {
+    padding: 1em;
+}
+
+section:nth-child(1) {
+    background: LightSteelBlue;
+}
+
+section:nth-child(2) {
+    background: Khaki;
+}
+
+section:nth-child(3) {
+    background: PowderBlue;
+}
