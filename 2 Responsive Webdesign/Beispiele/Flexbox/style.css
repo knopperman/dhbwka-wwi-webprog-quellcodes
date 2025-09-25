@@ -5,27 +5,37 @@ html {
 body {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     /* https://pixabay.com/illustrations/texture-abstract-pattern-backdrop-7515225/ */
     background-image: url(background.jpg);
     background-size: cover;
     background-position: center;
+
+    backdrop-filter: blur(20px);
 }
 
-header {
-    background: #f6f6f6;
+header > div {
+    background: rgba(0,0,0, 0.75);
+    color: white;
+    border-radius: 0.5em;
+
     box-shadow: 0px 0px 4px rgba(0,0,0, 0.5);
     z-index: 100;
 }
 
 main {
     flex: 1;
-    backdrop-filter: blur(20px);
+    gap: 0.5em;
+}
+
+label {
+    width: 8em;
 }
 
 section {
-    padding: 1em;
+    border: 1px solid black;
+    padding: 2em;
 }
 
 section:nth-child(1) {

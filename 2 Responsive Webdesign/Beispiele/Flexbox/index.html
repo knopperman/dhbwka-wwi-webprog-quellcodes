@@ -46,83 +46,72 @@
     </head>
     <body>
         <!-- Anzeigeoptionen -->
-        <header id="options" class="p-4 container-fluid gap-5">
-            <div class="row">
-                <div class="col-lg-8">
-                    <h4>Container</h4>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg p-0">
-                                <label for="display">display:</label>
-                                <select name="display" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
-                                    <option value="flex" selected>flex</option>
-                                    <option value=""></option>
-                                </select>
-                            </div>
-                            <div class="col-lg p-0">
-                                <label for="flex-direction">flex-direction:</label>
-                                <select name="flex-direction" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
-                                    <option value="row" selected>row</option>
-                                    <option value="row-reverse">row-reverse</option>
-                                    <option value="column">column</option>
-                                    <option value="column-reverse">column-reverse</option>
-                                </select>
-                            </div>
-                            <div class="col-lg p-0">
-                                <label for="justify-content">justify-content:</label>
-                                <select name="justify-content" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
-                                    <option value="flex-start" selected>flex-start</option>
-                                    <option value="flex-end">flex-end</option>
-                                    <option value="center">center</option>
-                                    <option value="space-between">space-between</option>
-                                    <option value="space-around">space-around</option>
-                                    <option value="space-evenly">space-evenly</option>
-                                </select>
-                            </div>
-                            <div class="col-lg p-0">
-                                <label for="align-items">align-items:</label>
-                                <select name="align-items" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
-                                    <option value="flex-start" selected>flex-start</option>
-                                    <option value="flex-end">flex-end</option>
-                                    <option value="center">center</option>
-                                    <option value="stretch">stretch</option>
-                                    <option value="baseline">baseline</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+        <header id="options" class="p-4">
+            <div class="p-4">
+                <h4>Container</h4>
+    
+                <div class="mb-1">
+                    <label for="display">display:</label>
+                    <select name="display" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
+                        <option value="flex" selected>flex</option>
+                        <option value=""></option>
+                    </select>
                 </div>
-
-                <div class="col-lg-4 mt-4 mt-lg-0">
-                    <h4>Kinder</h4>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg p-0">
-                                <label for="flex1">flex:</label>
-                                <select name="flex1" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
-                                    <option value="" selected></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                                <select name="flex2" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
-                                    <option value="" selected></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                                <select name="flex3" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
-                                    <option value="" selected></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                <div class="mb-1">
+                    <label for="flex-direction">flex-direction:</label>
+                    <select name="flex-direction" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
+                        <option value="row" selected>row</option>
+                        <option value="column">column</option>
+                        <option value="row-reverse">row-reverse</option>
+                        <option value="column-reverse">column-reverse</option>
+                    </select>
+                </div>
+                <div class="mb-1">
+                    <label for="justify-content">justify-content:</label>
+                    <select name="justify-content" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
+                        <option value="flex-start" selected>flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center">center</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+                </div>
+                <div class="mb-1">
+                    <label for="align-items">align-items:</label>
+                    <select name="align-items" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
+                        <option value="flex-start" selected>flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center">center</option>
+                        <option value="stretch">stretch</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+                </div>
+    
+                <h4 class="mt-4">Kinder</h4>
+                <div class="mb-1">
+                    <label for="flex1">flex:</label>
+                    <select name="flex1" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
+                        <option value="" selected></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <select name="flex2" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
+                        <option value="" selected></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <select name="flex3" class="form-select d-inline w-auto ms-2" onchange="update_preview()">
+                        <option value="" selected></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
                 </div>
             </div>
         </header>
