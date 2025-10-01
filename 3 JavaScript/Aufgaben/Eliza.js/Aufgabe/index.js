@@ -2,7 +2,7 @@
  * Warten, bis die Seite komplett geladen wurde und dann erst die Initialisierungen
  * im JavaScript vornehmen. Sonst funktionieren die DOM-Zugriffe nicht.
  */
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
     // Wichtige HTML-Elemente besorgen
     let messagesElement = null;     // TODO: Element "#chat-area .messages" stattdessen zuweisen
     let inputElement = null;        // TODO: Element "#chat-area input" stattdessen zuweisen
