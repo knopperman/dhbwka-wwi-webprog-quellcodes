@@ -7,7 +7,7 @@
  * sorgt dafür, dass der für die jeweilige URL richtige Inhalt angezeigt wird.
  *
  * Hierzu muss der Klasse bei ihrer Instantiierung eine Liste mit Routen
- * mitgegeben werden, die jeweils einen regulären Ausdrück zur Prüfung der
+ * mitgegeben werden, die jeweils einen regulären Ausdruck zur Prüfung der
  * URL sowie eine Funktion zur Anzeige des dazugehörigen Inhalts besitzen.
  */
 export class Router {

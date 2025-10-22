@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * Diese Klasse stellt einen so genannten Single Page Router dar. Sie überwacht
  * die momentan aktive URL (die sich durch Anklicken eines Links oder durch
@@ -10,7 +8,8 @@
  * mitgegeben werden, die jeweils einen regulären Ausdruck zur Prüfung der
  * URL sowie eine Funktion zur Anzeige des dazugehörigen Inhalts besitzen.
  */
-export default class Router {
+// TODO: Klasse muss exportiert werden!
+class Router {
     /**
      * Konstruktor. Im Parameter routes muss eine Liste mit den vorhandenen
      * URL-Routen der App übergeben werden. Die Liste muss folgendes Format
@@ -33,19 +32,19 @@ export default class Router {
         this._routes = routes;
         this._started = false;
 
-        window.addEventListener("hashchange", () => this._handleRouting());
+        window.addEventListener("hashchange", async () => await this._handleRouting());
     }
 
     /**
      * Routing starten und erste Route direkt aufrufen.
      */
-    start() {
+    async start() {
         this._started = true;
-        this._handleRouting();
+        await this._handleRouting();
     }
 
     /**
-     * Routing stoppen, so dass der Router nicht mehr aktiv wird, wenn ein Link
+     * Routing stoppen, so dass der Router nicht mehr aktiv wird, wenn Link
      * angeklickt wird oder sich die URL der Seite sonst irgendwie ändert.
      */
     stop() {
@@ -78,7 +77,7 @@ export default class Router {
      * werden, dass er trotzdem die Startseite zurückliefert, auch wenn diese
      * nicht direkt angesprochen wurde. Diesen Aufwand sparen wir uns hier. :-)
      */
-    _handleRouting() {
+    async _handleRouting() {
         let url = location.hash.slice(1);
 
         if (url.length === 0) {
@@ -93,6 +92,6 @@ export default class Router {
             return;
         }
 
-        route.show(matches);
+        await route.show(matches);
     }
-};
+}
